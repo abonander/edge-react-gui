@@ -637,6 +637,16 @@ export const EDGE_PLUGIN_REGIONS = {
     priority: 6,
     paymentType: 'cash'
   },
+  bity: {
+    countryCodes: {
+      US: true
+    },
+    cryptoCodes: {
+      BTC: true
+    },
+    priority: 7,
+    paymentType: 'cash'
+  },
   // eslint-disable-next-line no-useless-computed-key
   'bits of gold': {
     countryCodes: {

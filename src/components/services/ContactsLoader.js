@@ -102,6 +102,18 @@ const merchantPartners = [
     recordID: ''
   },
   {
+    givenName: 'Bity',
+    hasThumbnail: true,
+    thumbnailPath: 'https://developer.edge.app/content/wyre.png',
+    emailAddresses: [],
+    postalAddresses: [],
+    middleName: '',
+    company: '',
+    jobTitle: '',
+    familyName: '',
+    recordID: ''
+  },
+  {
     givenName: 'Bitrefill',
     hasThumbnail: true,
     thumbnailPath: 'https://developer.edge.app/content/bitrefill.png',

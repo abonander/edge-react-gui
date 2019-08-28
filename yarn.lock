@@ -3537,6 +3537,13 @@ edge-login-ui-rn@0.5.38:
     js-sha256 "^0.9.0"
     moment "^2.22.2"
 
+"edge-plugins-bity@https://github.com/EdgeApp/edge-plugin-bity.git":
+  version "0.0.1"
+  resolved "https://github.com/EdgeApp/edge-plugin-bity.git#6df371bed5ddebb553c225ccb522120567369fa3"
+  dependencies:
+    js-sha256 "^0.9.0"
+    moment "^2.22.2"
+
 edge-ripple-keypairs@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/edge-ripple-keypairs/-/edge-ripple-keypairs-0.0.1.tgz#734f39733132a11098a70b93c58f27740e15740c"
