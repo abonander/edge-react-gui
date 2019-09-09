@@ -1,5 +1,4 @@
 // @flow
-
 import { createSimpleConfirmModal } from 'edge-components'
 import type { EdgeCurrencyWallet, EdgeMetadata, EdgeNetworkFee, EdgeSpendTarget, EdgeTransaction } from 'edge-core-js'
 import React from 'react'
@@ -25,6 +24,7 @@ import * as CORE_SELECTORS from '../../../Core/selectors.js'
 import { displayErrorAlert } from '../../../UI/components/ErrorAlert/actions.js'
 import * as UI_SELECTORS from '../../../UI/selectors.js'
 
+//
 type EdgeReceiveAddress = {
   publicAddress?: string,
   segwitAddress?: string,
@@ -341,18 +341,23 @@ export class EdgeProvider extends Bridgeable {
       return Promise.reject(e)
     }
   }
-
+  // src/components/services/airshipinstance
   // Sign a message using a public address from the current wallet
-  /* signMessage (options: EdgeSignMessageOptions): EdgeSignedMessage {
-    console.log('a1: signMessage', options)
+  // signMessage (options: EdgeSignMessageOptions): EdgeSignedMessage {
+  async signMessage (message: string): Object/* EdgeSignedMessage */ {
+    // console.log('a1: signMessage', options)
     // this is about bit id signatures.
-    const obj = {
-      publicKey: 'string',
-      // Hex encoded signature
-      signedMessage: 'string'
+    const guiWallet = UI_SELECTORS.getSelectedWallet(this._state)
+    const coreWallet = CORE_SELECTORS.getWallet(this._state, guiWallet.id)
+    try {
+      const signedMessage = await coreWallet.otherMethods.signMessageBase64('A message', guiWallet.receiveAddress.publicAddress)
+      console.log('stop', signedMessage)
+      return Promise.resolve(signedMessage)
+    } catch (e) {
+      console.log('EP: E', e)
+      console.log('EP: E', e)
     }
-    return Promise.resolve(obj)
-  } */
+  }
 
   // from the older stuff
   async _makeSpendRequest (guiMakeSpendInfo: GuiMakeSpendInfo): Promise<EdgeTransaction> {

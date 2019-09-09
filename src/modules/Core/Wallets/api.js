@@ -149,16 +149,6 @@ export const parseUri = (wallet: EdgeCurrencyWallet, uri: string, currencyCode?:
 }
 
 export const signTransaction = (wallet: EdgeCurrencyWallet, unsignedTransaction: EdgeTransaction): Promise<EdgeTransaction> => {
-  /* wallet.signTx({
-    otherParams: {
-      signMessage: {
-        message: 'What ever you want',
-        address: unsignedTransaction.ourReceiveAddresses[0]
-      }
-    }
-  }).then(result => {
-    console.log('EP: ', result)
-  }) */
   return wallet.signTx(unsignedTransaction)
 }
 
