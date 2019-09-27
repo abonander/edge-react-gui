@@ -73,15 +73,15 @@ export const SYNCED_ACCOUNT_DEFAULTS = {
   QTUM: {
     denomination: '100000000'
   },
-  XMR: {
+  /*XMR: {
     denomination: '1000000000000'
-  },
+  },*/
   XTZ: {
     denomination: '1000000'
   },
-  ETH: {
+/*  ETH: {
     denomination: '1000000000000000000'
-  },
+  },*/
   UFO: {
     denomination: '100000000'
   },

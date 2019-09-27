@@ -80,6 +80,7 @@ export const CURRENCY_PLUGIN_NAMES = {
   XLM: 'stellar',
   XMR: 'monero',
   XRP: 'ripple',
+  XHB: 'hedera',
   XTZ: 'tezos',
   XZC: 'zcoin'
 }
@@ -212,6 +213,10 @@ export const SPECIAL_CURRENCY_INFO: SpecialCurrencyInfo = {
     },
     isImportKeySupported: true,
     dummyPublicAddress: 'bnb1rt449yu7us6hmk4pmyr8talc60ydkwp4qkvcl7'
+  },
+  XHB: {
+    isImportKeySupported: true,
+    displayBuyCrypto: false
   }
 }
 
